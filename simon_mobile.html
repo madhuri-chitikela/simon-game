@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Simon Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body class="blue-gray-gradient-bg">
+    <div id="header-container"></div>
+
+    <div class="container">
+        <h2 id="level-title" class="text-center mt-3 mb-5">
+            <button id="btn-start">Start Game</button>
+        </h2>
+
+
+        <div class=" btn-container d-flex justify-content-center align-items-center">
+            <div class="mt-5">
+                <div class="d-flex justify-content-center mb-4">
+                    <button type="button" id="btn-tl" class="btn js-btn-play colored-btn btn-tl mr-4"></button>
+                    <div type="button" id="btn-rt" class="btn js-btn-play btn-rt colored-btn"></div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div type="button" id="pink" class="btn js-btn-play colored-btn pink mr-4"></div>
+                    <div type="button" id="yellow" class="btn js-btn-play colored-btn yellow"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        $("#header-container").load("header-partial.html")
+    </script>
+
+    <script src="simon_mobile.js"></script>
+</body>

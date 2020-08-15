@@ -1,0 +1,135 @@
+/* bootstrap overrides */
+
+.bg-dark {
+    background-color: #0D47A1 !important;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+body {
+    height: 100vh;
+}
+
+/* end: bootstrap overrides */
+.btn-container {
+    height: 100vh;
+    margin-top: -194px;
+}
+
+.blue-gradient-bg {
+    background: rgb(41,182,246);
+    background: linear-gradient(45deg, rgba(41,182,246,1) 0%, rgba(79,195,247,1) 50%, rgba(129,212,250,1) 100%);
+}
+
+.blue-gray-gradient-bg {
+    background: rgb(224,224,224);
+    background: linear-gradient(45deg, rgba(224,224,224,1) 0%, rgba(255,255,255,1) 50%, rgba(224,224,224,1) 100%);
+}
+
+#level-title {
+    color: black;
+    font-size: 2rem;
+    font-family: cursive;
+    height: 70px;
+}
+/*
+.container {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+*/
+.colored-btn {
+    height: 110px;
+    width: 110px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 20%;
+} 
+
+#btn-tl {
+    background-color: #F44336; /* red 500 */
+    border:5px solid #C62828; /* red 800 */
+}
+
+#btn-rt {
+    background-color: #03A9F4; /* light-blue 500 */
+    border:5px solid #0277BD; /* light-blue 800 */
+}
+
+#pink {
+    background-color: #43A047; /* green 600 */
+    border:5px solid #2E7D32; /* green 800 */
+}
+
+#yellow {
+    background-color: #FDD835; /* yellow 600 */
+    border:5px solid #F9A825; /* yellow 800 */
+}
+
+#btn-tl.pressed {
+    background-color: #EF9A9A; /* red 200*/
+    border-color: #FFCDD2; /* red 100 */
+}
+
+#btn-rt.pressed {
+    background-color: #81D4FA; /* light-blue 200 */
+    border-color: #E1F5FE; /* light-blue  */
+}
+
+#pink.pressed {
+    background-color: #A5D6A7; /* green 200 */
+    border-color: #66BB6A; /* green 400 */
+}
+
+#yellow.pressed {
+    background-color: #FFF59D; /* yellow 200 */
+    border-color: #FFF176; /* yellow 300 */
+}
+
+.pressed {
+    box-shadow: 0 0 20px black;
+}
+
+body.game-over {
+    background: rgb(239,83,80);
+    background: linear-gradient(45deg, rgba(239,83,80,1) 50%, rgba(229,115,115,1) 100%);
+} 
+
+/* red 600 */
+/*home.html*/
+
+.page-container {
+    height: 100vh;
+    margin-top: -60px;
+}
+
+#home-title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: cursive;
+    color: #311B92;
+}
+
+.logo-img {
+    box-shadow: 5px 5px 10px 0px #534040;
+    border-radius: 17px;
+}
+
+.start {
+    margin-top: 5px;
+}
+/*
+@media (min-width: 576px) { 
+    .colored-btn {
+        height: 150px;
+        width: 150px;
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 20%;
+    }     
+}
+*/

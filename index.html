@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Simon Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body class="blue-gradient-bg">
+    <div id="header-container"></div>
+    <div class="container">
+        <div class="page-container d-flex align-items-center">
+            <div class="w-100">
+                <div class="text-center mb-3">
+                    <img src="favicon_io\apple-touch-icon.png" class="logo-img">
+                </div>
+
+                <h1 id="home-title" class="text-center">SIMON GAME</h1>
+
+                <div class="text-center">
+                    <a class="btn btn-danger btn-lg start" href="simon_mobile.html" role="button">START</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $("#header-container").load("header-partial.html", function () {
+            $(".home-menu-item").addClass("active")
+        });
+    </script>
+</body>
+
+</html>

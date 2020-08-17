@@ -19,11 +19,11 @@ async function playPattern(gamePattern) {
     for (i = 0; i < gamePattern.length; i++) {
         await new Promise(function (resolve) {
             setTimeout(function () {
-                $("#" + gamePattern[i]).fadeIn(50).fadeOut(100).fadeIn(50)
+                $("#" + gamePattern[i]).fadeIn(100).fadeOut(100).fadeIn(100)
                 var audio = new Audio("sounds/" + gamePattern[i] + ".mp3")
                 audio.play()
                 resolve()
-            }, 200)
+            }, 300)
         });
     }
 }
@@ -46,7 +46,7 @@ function animatePress(currentColor) {
     $("#" + currentColor).addClass("pressed")
     setTimeout(function () {
         $("#" + currentColor).removeClass("pressed")
-    }, 200)
+    }, 100)
 }
 
 function checkAnswer(currentLevel) {

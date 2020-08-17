@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Patrick+Hand&display=swap');
+
 /* bootstrap overrides */
 
 .bg-dark {
@@ -11,6 +13,7 @@
 
 body {
     height: 100vh;
+    font-family: 'Patrick Hand', cursive;
 }
 
 /* end: bootstrap overrides */
@@ -29,10 +32,29 @@ body {
     background: linear-gradient(45deg, rgba(224,224,224,1) 0%, rgba(255,255,255,1) 50%, rgba(224,224,224,1) 100%);
 }
 
+.purple-gradient-bg {
+    background: rgb(186,104,200);
+    background: linear-gradient(45deg, rgba(186,104,200,1) 0%, rgba(156,39,176,1) 100%);
+}
+
+.pink-gradient-bg {
+    background: rgb(244,143,177);
+background: linear-gradient(45deg, rgba(244,143,177,1) 0%, rgba(248,187,208,1) 50%, rgba(244,143,177,1) 100%);
+}
+
+.blue-gradient-bg {
+    background: rgb(129,212,250);
+background: linear-gradient(45deg, rgba(129,212,250,1) 0%, rgba(179,229,252,1) 50%, rgba(129,212,250,1) 100%);
+}
+
+.black-gradient-bg {
+    background: rgb(38,50,56);
+background: linear-gradient(45deg, rgba(38,50,56,1) 0%, rgba(55,71,79,1) 100%);
+}
+
 #level-title {
     color: black;
     font-size: 2rem;
-    font-family: cursive;
     height: 70px;
 }
 
@@ -49,17 +71,17 @@ body {
     border:5px solid #C62828; /* red 800 */
 }
 
-#btn-rt {
+#btn-tr {
     background-color: #03A9F4; /* light-blue 500 */
     border:5px solid #0277BD; /* light-blue 800 */
 }
 
-#pink {
+#btn-bl {
     background-color: #43A047; /* green 600 */
     border:5px solid #2E7D32; /* green 800 */
 }
 
-#yellow {
+#btn-br {
     background-color: #FDD835; /* yellow 600 */
     border:5px solid #F9A825; /* yellow 800 */
 }
@@ -69,17 +91,17 @@ body {
     border-color: #FFCDD2; /* red 100 */
 }
 
-#btn-rt.pressed {
+#btn-tr.pressed {
     background-color: #81D4FA; /* light-blue 200 */
     border-color: #E1F5FE; /* light-blue  */
 }
 
-#pink.pressed {
+#btn-bl.pressed {
     background-color: #A5D6A7; /* green 200 */
     border-color: #66BB6A; /* green 400 */
 }
 
-#yellow.pressed {
+#btn-br.pressed {
     background-color: #FFF59D; /* yellow 200 */
     border-color: #FFF176; /* yellow 300 */
 }
@@ -93,7 +115,6 @@ body.game-over {
     background: linear-gradient(45deg, rgba(239,83,80,1) 50%, rgba(229,115,115,1) 100%);
 } 
 
-/* red 600 */
 /*home.html*/
 
 .page-container {
@@ -104,7 +125,6 @@ body.game-over {
 #home-title {
     font-size: 2rem;
     font-weight: bold;
-    font-family: cursive;
     color: #311B92;
 }
 
@@ -116,14 +136,3 @@ body.game-over {
 .start {
     margin-top: 5px;
 }
-/*
-@media (min-width: 576px) { 
-    .colored-btn {
-        height: 150px;
-        width: 150px;
-        display: inline-block;
-        border: 1px solid black;
-        border-radius: 20%;
-    }     
-}
-*/

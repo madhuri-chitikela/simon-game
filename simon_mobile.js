@@ -1,4 +1,4 @@
-var buttonColors = ["btn-rt", "pink", "btn-tl", "yellow"]
+var buttonColors = ["btn-tl", "btn-tr", "btn-bl", "btn-br"]  //tr-topRight, tl=topLeft, br-bottomRight, bl-bottomLeft
 var gamePattern = []
 var userClickedPattern = []
 var started = false
@@ -9,7 +9,6 @@ function nextSequence() {
     level++
     $("#level-title").text("Level " + level)
     var randomNumber = Math.floor(Math.random() * 4)
-    //console.log("randomNumber", randomNumber)
     var randomChosenColor = buttonColors[randomNumber]
     gamePattern.push(randomChosenColor)
     console.log(gamePattern)
@@ -20,11 +19,11 @@ async function playPattern(gamePattern) {
     for (i = 0; i < gamePattern.length; i++) {
         await new Promise(function (resolve) {
             setTimeout(function () {
-                $("#" + gamePattern[i]).fadeIn(100).fadeOut(100).fadeIn(200)
+                $("#" + gamePattern[i]).fadeIn(50).fadeOut(100).fadeIn(50)
                 var audio = new Audio("sounds/" + gamePattern[i] + ".mp3")
                 audio.play()
                 resolve()
-            }, 400)
+            }, 200)
         });
     }
 }
@@ -39,10 +38,8 @@ function handleButtonClick() {
 }
 
 function playSound(name) {
-    //for (i = 0; i < gamePattern.length + 1; i++) {
     var audio = new Audio("sounds/" + name + ".mp3")
     audio.play()
-    //}
 }
 
 function animatePress(currentColor) {
@@ -71,7 +68,7 @@ function checkAnswer(currentLevel) {
         $("#level-title").html(`
             <span>
                 Game Over
-                <button id="btn-restart">Restart</button></span>
+                <button id="btn-restart" class="btn btn-secondary btn-lg">Restart</button></span>
         `)
         startOver()
     }
@@ -92,9 +89,28 @@ function startGame() {
     }
 }
 
+function enterFullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+        $("#full-screen").attr("hidden", true)
+        $("#exit-full-screen").removeAttr("hidden")
+    }
+}
+
+function exitFullScreen() {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+        $("#exit-full-screen").attr("hidden", true)
+        $("#full-screen").removeAttr("hidden")
+    }
+}
+
 function init() {
     $(document).on("click", "#btn-start", startGame)
     $(".js-btn-play").on("click", handleButtonClick)
     $(document).on("click", "#btn-restart", startGame)
+    console.log($("#full-screen"))
+    $(document).on("click", "#full-screen", enterFullScreen)
+    $(document).on("click", "#exit-full-screen", exitFullScreen)
 }
 init()

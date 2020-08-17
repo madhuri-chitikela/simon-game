@@ -3,6 +3,24 @@ var gamePattern = []
 var userClickedPattern = []
 var started = false
 var level = 0
+const audios = {
+    "btn-tl": new Audio("sounds/btn-tl.mp3"),
+    "btn-tr": new Audio("sounds/btn-tr.mp3"),
+    "btn-bl": new Audio("sounds/btn-bl.mp3"),
+    "btn-br": new Audio("sounds/btn-br.mp3"),
+    "wrong": new Audio("sounds/wrong.mp3"),
+}
+/*
+    btn-tl 0.417959,
+    btn-tr 0.391837
+    btn-br 0.228
+    btn-bl 0.438375
+*/
+// audios["btn-tl"].playbackRate = 2
+// audios["btn-tr"].playbackRate = 2
+// audios["btn-br"].playbackRate = 1
+// audios["btn-bl"].playbackRate = 2
+
 
 function nextSequence() {
     userClickedPattern = []
@@ -19,34 +37,33 @@ async function playPattern(gamePattern) {
     for (i = 0; i < gamePattern.length; i++) {
         await new Promise(function (resolve) {
             setTimeout(function () {
-                $("#" + gamePattern[i]).fadeIn(100).fadeOut(100).fadeIn(100)
-                var audio = new Audio("sounds/" + gamePattern[i] + ".mp3")
-                audio.play()
+                $("#" + gamePattern[i]).fadeIn(50).fadeOut(50).fadeIn(100)
+                audios[gamePattern[i]].play()
                 resolve()
-            }, 300)
+            }, 200)
         });
     }
 }
 
 function handleButtonClick() {
     var userChosenColor = $(this).attr("id")
-    userClickedPattern.push(userChosenColor)
-    console.log("userClickedPattern", userClickedPattern)
     playSound(userChosenColor)
+    userClickedPattern.push(userChosenColor)
+    // console.log("userClickedPattern", userClickedPattern)
     animatePress(userChosenColor)
     checkAnswer(userClickedPattern.length - 1)
 }
 
 function playSound(name) {
-    var audio = new Audio("sounds/" + name + ".mp3")
-    audio.play()
+    audios[name].play()
+    console.log(name, audios[name].duration)
 }
 
 function animatePress(currentColor) {
     $("#" + currentColor).addClass("pressed")
     setTimeout(function () {
         $("#" + currentColor).removeClass("pressed")
-    }, 100)
+    }, 200)
 }
 
 function checkAnswer(currentLevel) {
